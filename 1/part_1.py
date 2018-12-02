@@ -8,7 +8,7 @@ import utils
 
 # TODO: learn more about paths and importing and fix this nonsense
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import shared.utils # pylint: ignore=E402
+import shared.utils  # pylint: ignore=E402
 
 
 def process_frequency(inputs):
