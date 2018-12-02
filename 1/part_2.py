@@ -3,7 +3,13 @@ Solves part 2 of https://adventofcode.com/2018/day/1.
 """
 
 import collections
+import os
+import sys
 import utils
+
+# TODO: learn more about paths and importing and fix this nonsense
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import shared.utils  # pylint: ignore=E402
 
 
 def find_duplicate_frequency(inputs):
@@ -31,10 +37,10 @@ def find_duplicate_frequency(inputs):
 
 
 def main():
-    file_path = utils.arg_parse_input_path(1, 2)
-    data = utils.read_file(file_path)
+    file_path = shared.utils.arg_parse_input_path(1, 2)
+    data = shared.utils.read_file(file_path, utils.parse_line)
     first_duplicate = find_duplicate_frequency(data)
-    print("The first duplicate running frequency total is {0}.".format(
+    print("The first duplicate running frequency total is {0}".format(
         first_duplicate))
 
 
