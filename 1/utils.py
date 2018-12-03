@@ -12,7 +12,7 @@ def parse_line(line):
         line (string): The line to parse
 
     Returns:
-        list: A parsed input lines
+        int: An int representing the current frequency
     """
     line = line.strip()
     op, num = line[0], int(line[1:])

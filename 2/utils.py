@@ -11,6 +11,6 @@ def parse_line(line):
         line (string): The line to parse
 
     Returns:
-        list: A parsed input lines
+        str: A stripped input line
     """
     return line.strip()
